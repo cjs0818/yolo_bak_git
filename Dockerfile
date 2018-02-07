@@ -3,10 +3,10 @@
 # generated on 2017-06-10 20:30:32 +0000
 #--------------------
 # For RoS
-#FROM osrf/ros:kinetic-desktop
-#RUN apt-get update && apt-get install -y \
-#    ros-kinetic-desktop-full=1.3.1-0* \
-#    && rm -rf /var/lib/apt/lists/*
+FROM osrf/ros:kinetic-desktop
+RUN apt-get update && apt-get install -y \
+    ros-kinetic-desktop-full=1.3.1-0* \
+    && rm -rf /var/lib/apt/lists/*
 #--------------------
 
 #--------------------
@@ -17,7 +17,7 @@
 
 #--------------------
 # For OpenCV
-FROM jjanzic/docker-python3-opencv
+#FROM jjanzic/docker-python3-opencv
 #--------------------
 
 # install ros packages
