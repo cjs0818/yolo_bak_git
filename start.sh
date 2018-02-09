@@ -12,11 +12,14 @@ NAME_ID=jschoi_yolo
 #IMAGE_ID=kinetic-ros-base:rqt
 #IMAGE_ID=openhs/ubuntu-nvidia
 
-nvidia-docker run -it --rm \
+#nvidia-docker run -it --rm \
+#    --volume /home/jschoi/work/Yolo:/root/work:rw \
+
+docker run -it --rm \
     --env DISPLAY=$DISPLAY_IP:0 \
     --env LIBGL_ALWAYS_INDIRECT=1 \
     --volume /tmp/.X11-unix:/tmp/.X11-unix:rw \
-    --volume /home/jschoi/work/Yolo:/root/work:rw \
+    --volume /Users/jschoi/work/Yolo:/root/work:rw \
     --name $NAME_ID \
     -p 22345:11345 \
     $IMAGE_ID \
