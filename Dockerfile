@@ -11,13 +11,13 @@
 
 #--------------------
 # For CUDA
-#FROM nvidia/cuda
+FROM nvidia/cuda
 #RUN ls -al
 #--------------------
 
 #--------------------
 # For OpenCV
-FROM jjanzic/docker-python3-opencv
+#FROM jjanzic/docker-python3-opencv
 #--------------------
 
 # install ros packages
